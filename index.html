@@ -1,11 +1,12 @@
 <html>
     <head>
-        <script>
-            import { runPage} from './runPage.js'
+        <script type="module">
+            import { runPage } from './runPage.js';
+            window.addEventListener('load', runPage);
         </script>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body onload="runPage();">
+    <body>
         😔
     </body>
 </html>

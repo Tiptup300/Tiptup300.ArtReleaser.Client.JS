@@ -1,8 +1,5 @@
 import { buildPage } from './buildPage.js';
 
-var pageTitle = "";
-var db = [];
-
 export function runPage() {
     let body, page;
 
@@ -10,18 +7,12 @@ export function runPage() {
     clearBody(body);
     page = buildPage();
     addPageToBody(body, page);
-    setPageTitle();
     
     function getBody(){
-        let output;
-
-        output = 
-            document
+        return document
             .getElementsByTagName(
                 "body"
-            );
-
-        return output;
+            )[0];
     }
 
     function clearBody(body) {
@@ -29,10 +20,6 @@ export function runPage() {
     }
 
     function addPageToBody(body, page) {
-        body.appendChild(page);
-    }
-
-    function setPageTitle() {
-        document.title = pageTitle;
+        body.append(page);
     }
 }
