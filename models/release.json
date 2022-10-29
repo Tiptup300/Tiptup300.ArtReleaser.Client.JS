@@ -1,0 +1,8 @@
+{
+    "artist": "string?",
+    "title": "string?",
+    "release": "binary",
+    "dmca": {
+        "dmcaId" : "123"
+    }
+}
